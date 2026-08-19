@@ -35,17 +35,20 @@ public class Main {
 
         FastScanner fs = new FastScanner();
         int a=fs.nextInt();
-        String b = "I hate ";
-        while(a>1){
-            if(a%2==0){
-                b+="that I love ";
+        String b = "";
+        for (int i = 1; i <= a; i++) {
+            if (i % 2 == 1) {
+                b += "I hate";
+            } else {
+                b += "I love";
             }
-            else {
-                b+="that I hate ";
+
+            if (i != a) {
+                b += " that ";
+            } else {
+                b += " it";
             }
-            a--;
         }
-        b+="it";
         System.out.println(b);
     }
 }
